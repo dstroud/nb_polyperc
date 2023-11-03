@@ -67,7 +67,7 @@ function add_polyperc_player(i)
 
     function player:note_on(note, vel, properties)
         local hz = math.min(music.note_num_to_freq(note), 24000) --limit so SC doesn't crash
-        osc.send({ "localhost", 57120 }, "/polyperc", {
+        osc.send({ "localhost", 57120 }, "/polyperc/perc", {
             hz, --pitch
             params:get(n(i, "decay")), --decay
             params:get(n(i, "pw")) * .01, --pw

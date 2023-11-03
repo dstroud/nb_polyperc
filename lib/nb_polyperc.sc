@@ -29,7 +29,7 @@ PolyPerc {
                     ++ [
                      \sendABus, (~sendA ? Server.default.outputBus), 
                      \sendBBus, (~sendB ? Server.default.outputBus)]);
-            }, "/polyperc");
+            }, "/polyperc/perc");
 
         }
     }
