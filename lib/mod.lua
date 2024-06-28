@@ -33,7 +33,7 @@ local function n(i, s)
 end
 
 local function add_polyperc_params(i)
-    params:add_group(n("group", i), "polyperc voice " .. i, 9)
+    params:add_group(n("group", i), "polyperc " .. i, 9)
     params:add_control(n(i, "decay"), "decay", controlspec.new(0.1, 3.2, 'lin', .01, 1.19, "s"))
     params:add_control(n(i, "cutoff"), "cutoff", controlspec.new(1, 20000, 'exp', 1, 841, "hz"))
     params:add_number(n(i, "tracking"), "tracking", 0, 100, 50, function(param) return format_percent(param:get()) end)
